@@ -25,6 +25,7 @@ class RoomProvider extends Component {
         try {
             let response = await Client.getEntries({
                 content_type: "cjResortRoom",
+                order:"fields.price"
             })
 
             let rooms = this.formatData(response.items)
